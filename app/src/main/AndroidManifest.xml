@@ -22,6 +22,7 @@
             android:authorities="ru.mail.techotrack.lection9.AdressBook"
             android:name=".MyProvider" >
         </provider>
+        <activity android:name=".ContactActivity" ></activity>
     </application>
 
 </manifest>
