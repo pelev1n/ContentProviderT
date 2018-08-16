@@ -80,10 +80,10 @@ public class ListFragment extends Fragment {
             }
         });
 
-        Button create = (Button)root.findViewById(R.id.btnCreate);
-        create.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                Button create = (Button)root.findViewById(R.id.btnCreate);
+                create.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
                 EditText contact = (EditText)root.findViewById(R.id.text_create);
                 String newContact = contact.getText().toString();
                 ContentValues cv = new ContentValues();
