@@ -55,7 +55,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
             @Override
             public void onClick(View v) {
                 Log.d(LOG_TAG, "---------------------------");
-                Log.d(LOG_TAG, "INFO::: id = " + id + "NAME::: "+ name + "EMAIL:::" + email);g
+                Log.d(LOG_TAG, "INFO::: id = " + id + "NAME::: "+ name + "EMAIL:::" + email);
                 ContentValues cv = new ContentValues();
                 cv.put(CONTACT_NAME, "Updated Name");
                 cv.put(CONTACT_EMAIL, "Updated Email");
