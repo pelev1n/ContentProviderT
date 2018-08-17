@@ -48,20 +48,15 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder>{
         final String email = cursor.getString(cursor.getColumnIndex(CONTACT_EMAIL));
         final long id = cursor.getLong(cursor.getColumnIndex(CONTACT_ID));
 
-        holder.text_email.setText(name);
-        holder.text_name.setText(email);
+        holder.text_name.setText(name);
+        holder.text_email.setText(email);
 
         holder.updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(LOG_TAG, "---------------------------");
-                Log.d(LOG_TAG, "INFO::: id = " + id + "NAME::: "+ name + "EMAIL:::" + email);
-                ContentValues cv = new ContentValues();
-                cv.put(CONTACT_NAME, "Updated Name");
-                cv.put(CONTACT_EMAIL, "Updated Email");
-                Uri uri = ContentUris.withAppendedId(CONTACT_URI, id);
-                int cnt = context.getContentResolver().update(uri, cv,null,null);
-                Log.d(LOG_TAG, "update, count = " + 1);
+                Intent intent = new Intent(context,ContactActivity.class);
+                intent.putExtra("id",id);
+                context.startActivity(intent);
                 update();
 
             }

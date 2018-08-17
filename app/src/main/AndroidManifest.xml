@@ -23,6 +23,7 @@
             android:name=".MyProvider" >
         </provider>
         <activity android:name=".ContactActivity" ></activity>
+        <activity android:name=".CreateActivity" ></activity>
     </application>
 
 </manifest>
